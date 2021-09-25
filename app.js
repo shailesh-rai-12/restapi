@@ -6,7 +6,7 @@ const mongoose= require('mongoose')
 require('dotenv/config');
 
 //importing routes
-const routes=require('./routes/get');
+const routes=require('./routes/employees');
 
 //body parser
 app.use(bodyParser.json());
@@ -22,7 +22,10 @@ mongoose.connect(process.env.DB_CONNECTION,
     // useCreateIndex: true,
   },
 ()=>{
-    console.log('connected to DB');
+  console.log('connected to DB');
+})
+.catch(err=>{
+console.log(err);
 })
 //port
 app.listen(3000);
