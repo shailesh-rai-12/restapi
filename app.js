@@ -8,7 +8,8 @@ const mongoose= require('mongoose')
 require('dotenv/config');
 
 //importing routes
-const routes=require('./routes/employees');
+const employeeRoutes=require('./routes/employees');
+const studentRoutes=require('./routes/students');
 
 //body parser
 app.use(bodyParser.json());
@@ -30,7 +31,8 @@ app.use((req,res,next)=>{
 
 });
 
-app.use('/',routes);
+app.use('/',employeeRoutes);
+app.use('/',studentRoutes);
 
 
 //database
