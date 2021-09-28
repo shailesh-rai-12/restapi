@@ -20,7 +20,7 @@ router.get('/students',(req,res)=>{
 
 
 router.get('/student',(req,res)=>{
-    //console.log(req.query);
+    console.log(req.query);
     Student.findById(req.query.id)
     .then((response)=>{
         res.json(response);
@@ -31,7 +31,7 @@ router.get('/student',(req,res)=>{
 })
 
 
-router.post('/students',(req,res)=>{
+router.post('/student',(req,res)=>{
    //console.log(req.body);
     const student = new Student({
         name:req.body.name,

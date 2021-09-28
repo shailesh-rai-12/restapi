@@ -45,8 +45,8 @@ mongoose.connect(process.env.DB_CONNECTION,
 ()=>{
   console.log('connected to DB');
 })
-.catch(err=>{
-console.log(err);
-})
+// .catch(err=>{
+// console.log(err);
+// })
 //port
 app.listen(3000);
