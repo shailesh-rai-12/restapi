@@ -10,6 +10,7 @@ require('dotenv/config');
 //importing routes
 const employeeRoutes=require('./routes/employees');
 const studentRoutes=require('./routes/students');
+const userRoutes=require('./routes/users');
 
 //body parser
 app.use(bodyParser.json());
@@ -33,6 +34,7 @@ app.use((req,res,next)=>{
 
 app.use('/',employeeRoutes);
 app.use('/',studentRoutes);
+app.use('/',userRoutes);
 
 
 //database
